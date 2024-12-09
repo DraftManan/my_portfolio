@@ -5,7 +5,7 @@ const Button = ({ text, link }) => (
     href={link}
     target="_blank"
     rel="noopener noreferrer"
-    className="inline-block px-6 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-600"
+    className="inline-block px-4 py-2 text-white bg-black rounded-lg text-sm sm:text-base"
   >
     {text}
   </a>
@@ -13,67 +13,70 @@ const Button = ({ text, link }) => (
 
 const Intro = () => {
   return (
-    <section className="relative z-20 w-full max-w-4xl mx-auto mt-16 px-7 md:mt-24 lg:mt-32 xl:px-0">
+    <><div className="h-[50px]"></div><section
+      id="home"
+      className="relative z-20 w-full max-w-4xl mx-auto mt-12 px-5 sm:px-7 md:mt-24 lg:mt-32"
+    >
       <div className="flex flex-col items-center md:flex-row">
-        <div className="relative w-full md:w-1/2">
-          <h1
-            className="mb-5 text-4xl font-bold leading-tight md:text-4xl lg:text-6xl dark:text-white"
-          >
-            Hello, I'm Kai.
-          </h1>
-          <p className="mb-6 text-base text-neutral-600 dark:text-neutral-400">
-            I'm a front-end programmer living in Nanjing. <br
-              className="hidden lg:block"
-            />
-            I focus on Web development.
+        {/* Text Content */}
+        <div className="relative w-full md:w-1/2 text-center md:text-left">
+          <h3 className="mb-4 text-3xl sm:text-4xl font-bold leading-tight md:text-4xl lg:text-6xl">
+            Hello, I'm Mananchaya.
+          </h3>
+          <p className="mb-4 text-sm sm:text-base text-neutral-600">
+            I am a third-year IT student at King Mongkut's Institute of Technology Ladkrabang (KMITL){" "}
+            <br className="hidden lg:block" />
           </p>
-          <p className="mb-2 font-semibold text-neutral-800 dark:text-neutral-200">
-            I can help you out with:
-          </p>
-          <ul
-            className="py-2 space-y-[3px] text-sm list-disc list-inside text-neutral-500 dark:text-neutral-400"
-          >
-            <li>Vue.js Development</li>
-            <li>React.js Development</li>
-            <li>Node.js Development</li>
-            <li>Website Design</li>
-            <li>and more...</li>
+          <p className="mb-2 font-semibold text-neutral-800">I can help you out with:</p>
+          <ul className="py-2 space-y-[3px] text-sm sm:text-base list-disc list-inside text-neutral-500">
+            <li>Website Development</li>
+            <li>Fullstack Development</li>
           </ul>
-          <Button text="Follow me on 𝕏" link="https://twitter.com/0xKaiBi" />
+          <Button text="View Github" link="https://github.com/DraftManan" />
         </div>
 
-        <div
-          className="relative justify-end hidden w-full mt-10 md:flex md:pl-10 md:w-1/2 md:mt-0 md:translate-y-4 xl:translate-y-0"
-        >
-          <div className="relative z-50 w-full">
-            <div
-              className="absolute bottom-0 z-40 w-16 h-16 -translate-x-6 -translate-y-1/2 lg:top-auto top-0 lg:-translate-y-[330px] rounded-full"
-            >
-              <span
-                className="relative z-20 flex items-center justify-center w-full h-full text-2xl border-8 border-white rounded-full dark:border-neutral-950 bg-neutral-100 dark:bg-neutral-900"
-              >
-                <span
-                  className="flex items-center justify-center w-full h-full bg-white border border-dashed rounded-full dark:bg-neutral-950 border-neutral-300 dark:border-neutral-700"
-                >
-                  👋
-                </span>
-              </span>
-            </div>
-            <div className="relative z-30 px-10">
+        {/* Image Content */}
+        <div className="relative w-full mt-10 md:mt-0 md:flex md:pl-10 md:w-1/2">
+          <div className="relative w-full">
+            <div className="relative px-6">
               <img
                 src="/images/photo.png"
+                alt="Mananchaya"
                 loading="eager"
                 decoding="auto"
-                className="relative z-30 w-full aspect-[490/800] md:max-w-md mx-auto dark:-translate-y-0.5"
-              />
+                className="mx-auto w-2/3 sm:w-1/2 md:w-full max-w-xs aspect-[590/1100] object-cover rounded-lg" />
             </div>
-            <div
-              className="absolute bottom-0 right-0 z-20 w-full h-full lg:h-[420px] translate-x-0 -translate-y-px border border-dashed rounded-2xl bg-gradient-to-r dark:from-neutral-950 dark:via-black dark:to-neutral-950 from-white via-neutral-50 to-white border-neutral-300 dark:border-neutral-700"
-            ></div>
           </div>
         </div>
       </div>
-    </section>
+
+      {/* Divider Section */}
+      <div className="relative my-20 sm:my-32">
+        <div className="relative w-full pl-5 overflow-x-hidden md:pl-0">
+          <div className="absolute w-full h-px bg-gradient-to-r from-transparent to-white md:from-white dark:from-transparent dark:to-neutral-950 md:dark:from-neutral-950"></div>
+          <div className="w-full h-px border-t border-dashed border-neutral-300 dark:border-neutral-600"></div>
+        </div>
+        <div className="absolute flex items-center justify-center w-auto h-auto px-3 py-1.5 uppercase tracking-widest space-x-1 text-[0.6rem] md:-translate-x-1/2 -translate-y-1/2 border rounded-full bg-white dark:bg-neutral-900 text-neutral-400 left-0 md:ml-0 ml-5 md:left-1/2 border-neutral-100 dark:border-neutral-800 shadow-sm">
+          <p className="leading-none">Check out my skill</p>
+          <div className="flex items-center justify-center w-5 h-5 translate-x-1 border rounded-full border-neutral-100 dark:border-neutral-800">
+            <svg
+              className="w-3 h-3"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M12 4.5v15m0 0l6.75-6.75M12 19.5l-6.75-6.75"
+              ></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section></>
   );
 };
 
